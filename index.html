@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>The Flash App by Basa Pilipinas</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,6 +12,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
         }
         
         body {
@@ -25,6 +26,8 @@
             margin: 0;
             line-height: 1.6;
             color: #2d3748;
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
         }
         
         .app-container {
@@ -100,6 +103,7 @@
             background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(10px);
             font-weight: 500;
+            min-height: 56px;
         }
         
         .password-input:focus {
@@ -124,6 +128,7 @@
             overflow: hidden;
             font-size: 1.1rem;
             letter-spacing: 0.025em;
+            min-height: 56px;
         }
         
         .password-btn:hover {
@@ -258,10 +263,11 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            padding: 10px;
+            padding: 12px;
             border-radius: 8px;
             cursor: pointer;
             transition: all 0.3s ease;
+            min-height: 48px;
         }
         
         .option:hover {
@@ -270,6 +276,8 @@
         
         .option input[type="radio"] {
             margin: 0;
+            width: 20px;
+            height: 20px;
         }
         
         .assessment-timer {
@@ -283,6 +291,7 @@
             font-weight: 600;
             font-size: 1.1rem;
             box-shadow: 0 5px 15px rgba(239, 51, 64, 0.3);
+            z-index: 1000;
         }
         
         .assessment-results {
@@ -346,6 +355,10 @@
             letter-spacing: 0.025em;
             position: relative;
             overflow: hidden;
+            min-height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .nav-tab.active {
@@ -398,10 +411,16 @@
             background: rgba(255,255,255,0.2);
             color: white;
             border: 2px solid rgba(255,255,255,0.3);
-            padding: 10px 20px;
+            padding: 12px 24px;
             border-radius: 25px;
             cursor: pointer;
             transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 1rem;
+            min-height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .pomodoro-btn:hover {
@@ -430,21 +449,24 @@
         }
         
         .log-input, .log-textarea {
-            padding: 12px 15px;
+            padding: 16px 20px;
             border: 2px solid #e9ecef;
-            border-radius: 10px;
-            font-size: 1rem;
+            border-radius: 12px;
+            font-size: 1.1rem;
             font-family: inherit;
+            min-height: 56px;
+            transition: all 0.3s ease;
         }
         
         .log-textarea {
-            min-height: 100px;
+            min-height: 120px;
             resize: vertical;
         }
         
         .log-input:focus, .log-textarea:focus {
             outline: none;
             border-color: #2e86e0;
+            box-shadow: 0 0 0 3px rgba(46, 134, 224, 0.1);
         }
         
         .log-entries {
@@ -462,10 +484,11 @@
         
         .log-entry-header {
             display: flex;
-            justify-content: between;
+            justify-content: space-between;
             align-items: center;
             margin-bottom: 10px;
             flex-wrap: wrap;
+            gap: 8px;
         }
         
         .log-book-title {
@@ -501,12 +524,17 @@
         }
         
         .period-btn {
-            padding: 8px 16px;
+            padding: 12px 20px;
             background: white;
             border: 2px solid #e9ecef;
             border-radius: 20px;
             cursor: pointer;
             transition: all 0.3s ease;
+            font-weight: 600;
+            min-height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .period-btn.active {
@@ -523,10 +551,16 @@
         
         .stat-card {
             background: white;
-            border-radius: 10px;
-            padding: 20px;
+            border-radius: 12px;
+            padding: 24px 20px;
             text-align: center;
             border: 2px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
         }
         
         .stat-card-value {
@@ -539,6 +573,7 @@
         .stat-card-label {
             color: #666;
             font-size: 0.9rem;
+            font-weight: 600;
         }
         
         .recommendations-container {
@@ -687,6 +722,7 @@
             background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(10px);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            min-height: 48px;
         }
         
         .level-select {
@@ -700,6 +736,7 @@
             cursor: pointer;
             min-width: 240px;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            min-height: 48px;
         }
         
         .speed-input:focus, .chunk-input:focus, .level-select:focus {
@@ -777,6 +814,10 @@
             position: relative;
             overflow: hidden;
             backdrop-filter: blur(10px);
+            min-height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .btn::before {
@@ -905,31 +946,334 @@
             letter-spacing: 0.05em;
         }
         
+        /* Mobile Optimizations */
         @media (max-width: 768px) {
+            body {
+                padding: 10px;
+                font-size: 16px;
+            }
+            
+            .app-container {
+                padding: 20px;
+                border-radius: 16px;
+                margin: 0;
+                min-height: calc(100vh - 20px);
+            }
+            
+            .title {
+                font-size: 2.5rem;
+                margin-bottom: 12px;
+            }
+            
+            .brand-subtitle {
+                font-size: 1.1rem;
+                margin-bottom: 20px;
+            }
+            
+            .nav-tabs {
+                flex-direction: column;
+                gap: 8px;
+                padding: 12px;
+                margin-bottom: 20px;
+            }
+            
+            .nav-tab {
+                padding: 18px 20px;
+                font-size: 1.1rem;
+                width: 100%;
+                text-align: center;
+                min-height: 56px;
+            }
+            
             .controls {
                 flex-direction: column;
-                gap: 10px;
+                gap: 15px;
+                margin-bottom: 20px;
+            }
+            
+            .control-group {
+                flex-direction: column;
+                gap: 8px;
+                align-items: stretch;
+            }
+            
+            .control-label {
+                font-size: 1rem;
+                text-align: center;
+            }
+            
+            .speed-input, .chunk-input, .level-select {
+                width: 100%;
+                padding: 16px 20px;
+                font-size: 1.2rem;
+                min-height: 56px;
+                border-radius: 16px;
+            }
+            
+            .flash-display {
+                font-size: 2rem;
+                padding: 30px 20px;
+                min-height: 180px;
+                margin: 20px 0;
+                line-height: 1.2;
             }
             
             .button-group {
                 flex-direction: column;
+                gap: 12px;
+                margin-bottom: 20px;
+            }
+            
+            .btn {
+                width: 100%;
+                padding: 18px 24px;
+                font-size: 1.2rem;
+                min-height: 56px;
+                border-radius: 16px;
             }
             
             .stats {
-                flex-direction: column;
-                gap: 15px;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+                margin-top: 20px;
             }
             
-            .flash-display {
+            .stat-item {
+                padding: 20px 16px;
+            }
+            
+            .stat-value {
+                font-size: 1.8rem;
+            }
+            
+            .stat-label {
+                font-size: 0.85rem;
+            }
+            
+            /* Password Screen Mobile */
+            .password-title {
                 font-size: 2.5rem;
-                padding: 40px 15px;
-                min-height: 200px;
             }
             
+            .password-form {
+                max-width: 100%;
+                margin: 0 auto 30px;
+            }
+            
+            .input-group {
+                flex-direction: column;
+                gap: 12px;
+            }
+            
+            .password-input {
+                width: 100%;
+                padding: 18px 20px;
+                font-size: 1.2rem;
+                min-height: 56px;
+            }
+            
+            .password-btn {
+                width: 100%;
+                padding: 18px 24px;
+                font-size: 1.2rem;
+                min-height: 56px;
+            }
+            
+            /* Assessment Mobile */
             .assessment-timer {
                 position: static;
                 margin-bottom: 20px;
                 display: inline-block;
+                padding: 12px 20px;
+                font-size: 1.1rem;
+            }
+            
+            .assessment-title {
+                font-size: 1.8rem;
+            }
+            
+            .assessment-passage {
+                padding: 20px;
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+            
+            .question {
+                padding: 16px;
+            }
+            
+            .option {
+                padding: 12px;
+                font-size: 1rem;
+            }
+            
+            /* Pomodoro Mobile */
+            .pomodoro-container {
+                padding: 30px 20px;
+                margin: 15px 0;
+            }
+            
+            .pomodoro-timer {
+                font-size: 3rem;
+                margin: 15px 0;
+            }
+            
+            .pomodoro-controls {
+                flex-direction: column;
+                gap: 12px;
+                margin: 20px 0;
+            }
+            
+            .pomodoro-btn {
+                width: 100%;
+                padding: 16px 20px;
+                font-size: 1.1rem;
+                min-height: 56px;
+                border-radius: 16px;
+            }
+            
+            /* Reading Log Mobile */
+            .log-container {
+                padding: 20px;
+                margin: 15px 0;
+            }
+            
+            .log-input, .log-textarea {
+                padding: 16px 20px;
+                font-size: 1.1rem;
+                min-height: 56px;
+                border-radius: 16px;
+            }
+            
+            .log-textarea {
+                min-height: 120px;
+            }
+            
+            .log-entry {
+                padding: 16px;
+                margin-bottom: 12px;
+            }
+            
+            .log-entry-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+            
+            .log-book-title {
+                font-size: 1rem;
+            }
+            
+            /* Statistics Mobile */
+            .stats-container {
+                padding: 20px;
+                margin: 15px 0;
+            }
+            
+            .stats-period {
+                flex-direction: column;
+                gap: 8px;
+                margin-bottom: 20px;
+            }
+            
+            .period-btn {
+                width: 100%;
+                padding: 12px 16px;
+                font-size: 1rem;
+                min-height: 48px;
+                border-radius: 16px;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+            
+            .stat-card {
+                padding: 16px 12px;
+            }
+            
+            .stat-card-value {
+                font-size: 1.6rem;
+            }
+            
+            .stat-card-label {
+                font-size: 0.8rem;
+            }
+            
+            .recommendations-container {
+                padding: 20px;
+                margin-top: 20px;
+            }
+            
+            .recommendation-item {
+                padding: 12px 16px;
+                font-size: 0.9rem;
+            }
+            
+            /* Quote Section Mobile */
+            .quote-section {
+                margin-top: 30px;
+                padding: 25px 15px;
+            }
+            
+            .quote-text {
+                font-size: 1.1rem;
+                line-height: 1.5;
+            }
+            
+            .quote-author {
+                font-size: 0.9rem;
+            }
+        }
+        
+        /* Extra small screens */
+        @media (max-width: 480px) {
+            .app-container {
+                padding: 15px;
+            }
+            
+            .title {
+                font-size: 2rem;
+            }
+            
+            .flash-display {
+                font-size: 1.6rem;
+                padding: 25px 15px;
+                min-height: 150px;
+            }
+            
+            .stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pomodoro-timer {
+                font-size: 2.5rem;
+            }
+        }
+        
+        /* Touch improvements */
+        @media (hover: none) and (pointer: coarse) {
+            .btn:hover, .nav-tab:hover, .option:hover, .period-btn:hover, .pomodoro-btn:hover {
+                transform: none;
+            }
+            
+            .btn:active, .nav-tab:active, .period-btn:active, .pomodoro-btn:active {
+                transform: scale(0.98);
+                transition: transform 0.1s ease;
+            }
+            
+            .stat-item:hover {
+                transform: none;
+            }
+            
+            .stat-item:active {
+                transform: scale(0.98);
+                transition: transform 0.1s ease;
             }
         }
     </style>
@@ -1976,5 +2320,5 @@ The implications extend beyond individual improvement to educational policy and 
         updateStats();
         displayRecommendations();
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9821a4641566c63b',t:'MTc1ODM3NDY1Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9821bc41c24f6011',t:'MTc1ODM3NTYzNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
